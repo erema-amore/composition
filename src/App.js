@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import Comment from './components/Comment';
 import './App.css';
 
 function App() {
+  const user = {
+    author: {
+      avatarUrl: 'https://wallpapers.com/images/hd/kitty-cat-pictures-2880-x-1800-ku5tkktvnjys6m5r.jpg',
+      name: 'Heloo Kitty'
+    },
+    text: 'I hope you enjoy learning React',
+    date: new Date()
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+     <Comment author={user.author} text={user.text} date={user.date}/>
     </div>
   );
 }
